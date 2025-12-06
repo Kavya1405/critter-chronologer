@@ -96,3 +96,47 @@ mvnw
 mvnw.cmd
 README.md
 ```
+## 🚀 How to Run the Application
+
+### **1️⃣ Clone the Repository**
+```bash
+git clone https://github.com/<your-username>/critter-chronologer.git
+```
+
+### **2️⃣ Navigate into the Project Folder**
+```bash
+cd critter-chronologer
+```
+
+### **3️⃣ Build the Project Using Maven**
+```bash
+mvn clean install
+```
+
+### **4️⃣ Run the Spring Boot Application**
+```bash
+mvn spring-boot:run
+```
+
+---
+
+## 🧪 Testing the APIs with Postman
+
+### **5️⃣ Import the Postman Collection**
+
+Go to Postman → *Import* → *Upload File*  
+Choose:
+
+```
+src/main/resources/Udacity.postman_collection.json
+```
+
+This collection contains all API requests for:
+- Customers  
+- Pets  
+- Employees  
+- Schedules  
+
+You can run and test the endpoints directly in Postman.
+```
+
