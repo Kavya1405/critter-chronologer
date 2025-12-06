@@ -1,43 +1,64 @@
 # Critter Chronologer – Pet & Employee Scheduling System
 
-Critter Chronologer is a Spring Boot–based scheduling system designed to manage pets, customers, employees, and service appointments.  
-This project demonstrates strong backend design skills including REST API development, entity modeling, relational mapping, and service orchestration.
+Critter Chronologer is a Spring Boot–based backend application designed to manage customers, pets, employees, and schedules.  
+This project showcases enterprise-level backend architecture using controllers, services, repositories, DTOs, and relational mappings.
 
 ---
 
 ## 🚀 Features
 
-### 🐾 Pet & Customer Management
-- Register customers and associate their pets
-- Store pet details such as type, breed, notes, and birthdate
+### 🐾 Customer & Pet Management
+- Add customers and associate multiple pets to each customer  
+- Store pet details such as type, birthdate, notes, and behavior  
 
 ### 👨‍💼 Employee Management
-- Create employee profiles with availability and skills
-- Assign employees to perform specific activities (feeding, walking, grooming, etc.)
+- Register employees with specific skills  
+- Define employee availability  
+- Assign employees to scheduled activities  
 
-### 📅 Schedule Management
-- Create schedules linking employees, pets, dates, and activities
-- Retrieve schedules based on:
-  - Pet ID  
-  - Employee ID  
-  - Customer ID  
+### 📅 Scheduling System
+- Create schedules connecting employees, pets, and activities  
+- Retrieve schedules by:
+  - Customer
+  - Pet
+  - Employee  
 
-### 🔗 REST API Endpoints
-- Full CRUD operations for pets, customers, employees, and schedules
-- DTO-based communication for clean request and response models
-
----
-
-## 🛠️ Technologies Used
-
-- **Java 17**
-- **Spring Boot**
-- **Spring MVC**
-- **Spring Data JPA**
-- **Hibernate**
-- **MySQL / H2 Database**
-- **Maven**
-- **Postman (API testing)**
+### 🧩 Clean Layered Architecture
+- **Controller layer** for API endpoints  
+- **Service layer** for business logic  
+- **Repository layer** for database access  
+- **DTOs + Mappers** for clean data transfer  
+- **Entities** mapped with JPA/Hibernate  
 
 ---
 
+## 🛠️ Tech Stack
+
+- **Java 17**  
+- **Spring Boot**  
+- **Spring MVC**  
+- **Spring Data JPA & Hibernate**  
+- **MySQL / H2 Database**  
+- **Maven**  
+- **Postman (API Testing)**  
+
+---
+
+## 📁 Project Structure
+
+src/
+├── main/java/com/udacity/jdnd/course3/critter
+│ ├── controller/
+│ ├── dto/
+│ ├── entity/
+│ ├── mapper/
+│ ├── repository/
+│ ├── service/
+│ └── CritterApplication.java
+│
+├── main/resources/
+│ ├── application.properties
+│ └── Udacity.postman_collection.json
+│
+└── test/java/com/udacity/jdnd/course3/critter
+└── CritterFunctionalTest.java
