@@ -1,0 +1,156 @@
+{
+  "info": {
+    "_postman_id": "c703e2b0-d8e2-4eef-9bda-987f1b83f092",
+    "name": "Critter API - Final Corrected",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+
+    {
+      "name": "Save Customer",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Alex\",\n  \"phoneNumber\": \"1234567890\"\n}"
+        },
+        "url": "http://localhost:8080/user/customer"
+      }
+    },
+
+    {
+      "name": "Save Pet",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\": \"CAT\",\n  \"name\": \"Kilo\",\n  \"birthDate\": \"2019-12-16\",\n  \"notes\": \"HI KILO\",\n  \"ownerId\": 1\n}"
+        },
+        "url": "http://localhost:8080/pet"
+      }
+    },
+
+    {
+      "name": "Save Employee",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Hannah\",\n  \"skills\": [\"PETTING\", \"FEEDING\"],\n  \"daysAvailable\": [\"MONDAY\", \"TUESDAY\"]\n}"
+        },
+        "url": "http://localhost:8080/user/employee"
+      }
+    },
+
+    {
+      "name": "Add Employee Schedule",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\"MONDAY\", \"TUESDAY\", \"FRIDAY\"]"
+        },
+        "url": "http://localhost:8080/user/employee/1/availability"
+      }
+    },
+
+    {
+      "name": "Check Availability",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"date\": \"2019-12-17\",\n  \"skills\": [\"PETTING\", \"FEEDING\"]\n}"
+        },
+        "url": "http://localhost:8080/user/employee/availability"
+      }
+    },
+
+    {
+      "name": "Create Schedule",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"employeeIds\": [1],\n  \"petIds\": [1],\n  \"date\": \"2025-11-22\",\n  \"activities\": [\"FEEDING\"]\n}"
+        },
+        "url": "http://localhost:8080/schedule"
+      }
+    },
+
+    {
+      "name": "Find Schedule By Pet",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/schedule/pet/1"
+      }
+    },
+
+    {
+      "name": "Find Schedule By Employee",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/schedule/employee/1"
+      }
+    },
+
+    {
+      "name": "Find Schedule By Owner",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/schedule/customer/1"
+      }
+    },
+
+    {
+      "name": "Get All Customers",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/user/customer"
+      }
+    },
+
+    {
+      "name": "Get All Pets",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/pet"
+      }
+    },
+
+    {
+      "name": "Get Pets By Owner",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/pet/owner/1"
+      }
+    },
+
+    {
+      "name": "Get Owner By Pet",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/user/customer/pet/1"
+      }
+    }
+
+  ]
+}
