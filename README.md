@@ -46,7 +46,7 @@ This project showcases enterprise-level backend architecture using controllers, 
 
 ## 📁 Project Structure
 
-
+```
 src
  ├── main
  │    ├── java/com/udacity/jdnd/course3/critter
@@ -95,3 +95,4 @@ HELP.md
 mvnw
 mvnw.cmd
 README.md
+```
